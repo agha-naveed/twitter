@@ -506,7 +506,7 @@
                                                         <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1xvli5t r-1hdv0qi"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg>
                                                     </div>
                                                     <div class="bookmark">
-                                                        <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1xvli5t r-1hdv0qi bookmark-icon"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg>
+                                                        <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1xvli5t r-1hdv0qi bookmark-icon bookmark-div-icon"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg>
 
                                                         <div class="added-notification">
                                                             <div class="texts">
@@ -515,7 +515,7 @@
                                                             </div>
                                                         </div>
                                                     
-                                                        <svg viewBox="0 0 24 24" aria-hidden="true" id="bookmark-blue-icn" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1xvli5t r-1hdv0qi hidden-icon"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5z"></path></g></svg>
+                                                        <svg viewBox="0 0 24 24" aria-hidden="true" id="bookmark-blue-icn" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1xvli5t r-1hdv0qi hidden-icon "><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5z"></path></g></svg>
                                                     </div>
                                                 </div>
                                                 <div class="share">
@@ -868,19 +868,19 @@
 
         
         // Bookmarks
-        let bookmark = document.querySelector('.bookmark');
-        let bookmarkBtn = document.querySelector('#bookmark-blue-icn');
+        let bookmark = document.querySelector('.bookmark-div-icon');
+        let bookmarkBtn = document.getElementById('bookmark-blue-icn');
         let bookmarkNotification = document.querySelector('.added-notification');
         var bookmarkCount = 0;
         bookmark.addEventListener('click', () => {
-        bookmarkCount++;
-        let notificationTexts = document.querySelector('.added-notification > .texts');
-        let removeNotification = document.querySelector('.added-notification > .texts > p');
-        let removeNotificationLink = document.querySelector('.added-notification > .texts > a');
+            bookmarkCount++;
+            let notificationTexts = document.querySelector('.added-notification > .texts');
+            let removeNotification = document.querySelector('.added-notification > .texts > p');
+            let removeNotificationLink = document.querySelector('.added-notification > .texts > a');
 
-        bookmarkNotification.style.display = 'flex';
-        bookmarkBtn.style.display = 'block';
-        if(bookmarkCount == 1) {
+            bookmarkNotification.style.display = 'flex';
+            bookmarkBtn.style.display = 'block';
+            
             removeNotification.innerHTML = 'Added to your Bookmarks'
 
             removeNotificationLink.style.display = 'block'
@@ -888,17 +888,22 @@
                 bookmarkNotification.style.display = 'none'; 
             },
             5000)
-        }
+        })
+        
+        bookmarkBtn.addEventListener('click', () => {
+            let notificationTexts = document.querySelector('.added-notification > .texts');
+            let removeNotification = document.querySelector('.added-notification > .texts > p');
+            let removeNotificationLink = document.querySelector('.added-notification > .texts > a');
 
-        else if(bookmarkCount == 2) {
-            notificationTexts.style.placeContent = 'center'
-            removeNotification.innerHTML = 'Remove from your Bookmarks'
-            removeNotificationLink.style.display = 'none';
-            
-            bookmarkBtn.style.display = 'none';
-            bookmarkCount = 0;
-        }
-    })
+            bookmarkNotification.style.display = 'flex';
+            bookmarkBtn.style.display = 'block';
+                notificationTexts.style.placeContent = 'center'
+                removeNotification.innerHTML = 'Remove from your Bookmarks'
+                removeNotificationLink.style.display = 'none';
+                
+                bookmarkBtn.style.display = 'none';
+                bookmarkCount = 0;
+        })
 
     document.getElementById('caption-p').onclick = (e) => e.stopPropagation()
     
