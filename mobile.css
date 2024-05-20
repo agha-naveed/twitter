@@ -252,7 +252,7 @@
 
     .reactions .btn-gap .bookmark .added-notification .texts {
         bottom: 70px;
-        left: 32vw;
+        left: 30vw;
     }
 }
 
@@ -328,7 +328,7 @@
         width: 100%;
     }
     .reactions .btn-gap .bookmark .added-notification .texts {
-        left: 20vw;
+        /* left: 20vw; */
     }
     .user-info {
         justify-content: normal;
@@ -393,10 +393,6 @@
 
 
 @media only screen and (max-width:383px) {
-    .reactions .btn-gap .bookmark .added-notification .texts {
-        left: 10vw;
-    }
-
     .post-reply .reply-text {
         width: 84%;
     }
@@ -405,11 +401,6 @@
 @media only screen and (max-width:330px) {
     .header-cover .posts-section .post {
         width: 95%;
-    }
-    .reactions .btn-gap .bookmark .added-notification .texts {
-        gap: 18px;
-        width: 58%;
-        align-items: center;
     }
     .reactions .btn-gap .bookmark .added-notification .texts p {
         font-size: 12px;
