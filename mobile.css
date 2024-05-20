@@ -327,9 +327,6 @@
     .caption-side .user-info .user-left-side {
         width: 100%;
     }
-    .reactions .btn-gap .bookmark .added-notification .texts {
-        /* left: 20vw; */
-    }
     .user-info {
         justify-content: normal;
     }
