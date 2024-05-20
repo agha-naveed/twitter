@@ -1822,8 +1822,6 @@ body .notification-bg {
     background-color: rgb(49, 49, 49);
 }
 
-
-
 .modal {
     width: 100vw;
     height: 100vh;
@@ -1863,6 +1861,9 @@ body .notification-bg {
 }
 .close-btn:hover {
     background-color: rgba(165, 165, 165, 0.562);
+}
+.post-browse-pic img {
+    width: 150px;
 }
 .modal-header .draft-btn {
     width: 76px;
