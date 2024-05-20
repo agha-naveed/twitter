@@ -13,6 +13,7 @@
     <section class="total-section">
         <div class="modal">
             <div class="modal-body">
+
                 <div class="modal-header">
                     <div class="close-btn">
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-z80fyv r-19wmn03" style="color: rgb(15, 20, 25);"><g><path d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z"></path></g></svg>
@@ -41,6 +42,9 @@
                             </div>
                         </div>
                         
+                        <div class="post-browse-pic">
+                            <img alt="" />
+                        </div>
 
                         <div class="reply-text">
                             <div class="modal-footer">
@@ -53,7 +57,7 @@
 
                                 <div class="reply-options-content">
                                     <div id="media-btn">
-                                        <input type="file"  accept=".png, .jpg, .jpeg" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                                        <input type="file"  accept=".png, .jpg, .jpeg" name="image" id="file" style="display: none;">
 
                                         <label for="file" style="cursor: pointer;" class="browse-file">
                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-z80fyv r-19wmn03" style="color: rgb(29, 155, 240);"><g><path d="M3 5.5C3 4.119 4.119 3 5.5 3h13C19.881 3 21 4.119 21 5.5v13c0 1.381-1.119 2.5-2.5 2.5h-13C4.119 21 3 19.881 3 18.5v-13zM5.5 5c-.276 0-.5.224-.5.5v9.086l3-3 3 3 5-5 3 3V5.5c0-.276-.224-.5-.5-.5h-13zM19 15.414l-3-3-5 5-3-3-3 3V18.5c0 .276.224.5.5.5h13c.276 0 .5-.224.5-.5v-3.086zM9.75 7C8.784 7 8 7.784 8 8.75s.784 1.75 1.75 1.75 1.75-.784 1.75-1.75S10.716 7 9.75 7z"></path></g></svg>
@@ -889,7 +893,7 @@
             },
             5000)
         })
-        
+
         bookmarkBtn.addEventListener('click', () => {
             let notificationTexts = document.querySelector('.added-notification > .texts');
             let removeNotification = document.querySelector('.added-notification > .texts > p');
@@ -979,6 +983,8 @@
     })
 
     
+
+
     let postButton = document.querySelector('#post-section')
     let postButtonActive = document.querySelector('#post-section > div');
 
@@ -1063,6 +1069,13 @@
 
     closeBtn.onclick = () => {
         modalBox.style.display = 'none';
+    }
+
+    let postMedia = document.querySelector('.post-browse-pic > img')
+    let mediaInput = document.querySelector('#file')
+
+    mediaInput.onchange = () => {
+        postMedia.src = URL.createObjectURL(mediaInput.files[0])
     }
 
     //  ------- For Closing Div -------
