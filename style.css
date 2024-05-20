@@ -2046,3 +2046,19 @@ body .notification-bg {
     display: grid;
     justify-content: center;
 }
+
+
+/* Global Classes */
+.fa-xmark {
+    cursor: pointer;
+    position: relative;
+    padding: 4px 5.5px;
+    font-size: 14px;
+    right: 30px;
+    bottom: 129px;
+    background-color: white;
+    border-radius: 50%;
+}
+#cross-icn {
+    display: none;
+}
