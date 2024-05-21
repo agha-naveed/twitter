@@ -1,5 +1,7 @@
 @font-face {
     font-family: 'Chirp Heavy';
+    /* font-style: normal; */
+    /* font-weight: ; */
     src: url('Chirp Heavy.otf');
   }
 
@@ -1721,7 +1723,6 @@ body .notification-bg {
     padding: 12px 0;
 }
 .post-reply .reply-text .reply-input #txt-area {
-    line-height: 30px;
     width: 32rem;
     height: 48px;
     resize: none;
@@ -1731,6 +1732,7 @@ body .notification-bg {
     border: none;
     outline: none;
 }
+
 .reply-input #txt-area::placeholder {
     padding: 1px 0;
     justify-self: center;
@@ -1860,8 +1862,13 @@ body .notification-bg {
 .close-btn:hover {
     background-color: rgba(165, 165, 165, 0.562);
 }
+.post-browse-pic {
+    display: flex;
+    max-height: 200px;
+    overflow: hidden;
+}
 .post-browse-pic img {
-    width: 150px;
+    width: 140px;
 }
 .modal-header .draft-btn {
     width: 76px;
@@ -2052,8 +2059,10 @@ body .notification-bg {
     position: relative;
     padding: 4px 5.5px;
     font-size: 14px;
-    right: 30px;
-    bottom: 129px;
+    height: 100%;
+    right: 26px;
+    top: 5px;
+    /* bottom: 129px; */
     background-color: white;
     border-radius: 50%;
 }
