@@ -34,11 +34,10 @@
                     <div class="post-reply space-y-3">
                         <div class="inline-flex w-100">
                             <div class="reply-dp ">
-                                <img src="img/dp.jpg" alt="" />
+                                <img src="img/dp.jpg" />
                             </div>
         
                             <div class="reply-input w-90 p-18">
-                                <!-- <textarea name="" id="txt-area" placeholder="Post your reply"></textarea> -->
                                 <div id="txt-area" class="w-100 f-24" style="min-height: 60px;" contentEditable="true"></div>
                             </div>
                         </div>
@@ -1075,24 +1074,39 @@
 
     let postMedia = document.querySelector('.post-browse-pic > img')
     let mediaInput = document.querySelector('#file')
-    let crossBtn = document.querySelector('.fa-xmark')
+    let crossBtn = document.getElementById('cross-icn');
 
     mediaInput.onchange = () => {
-        crossBtn.style.display = 'inline'
         postMedia.src = URL.createObjectURL(mediaInput.files[0])
+        console.log(postMedia.src)
+
+        if(postMedia.src)
+            crossBtn.style.display = 'inline'
+
+        else
+            crossBtn.style.display = 'none'
+    }
+    crossBtn.onclick = () => {
+        console.log(postMedia.src)
+        
+        postMedia.src = '#'
+        console.log(postMedia.src)
+        
+        crossBtn.style.display = 'none'
     }
 
     //  ------- For Closing Div -------
     document.addEventListener('keydown', (evt) => {
-            if(evt.code == 'Escape') {
-                repostOverlay.style.display = 'none';
-                shareOverlay.style.display = 'none';
-                moreBtnOverlay.style.display = 'none';
-                popupNotifications.style.display = 'none';
-                notificationBg.style.display = 'none';
-                modalBox.style.display = 'none';
-            }
+        if(evt.code == 'Escape') {
+            repostOverlay.style.display = 'none';
+            shareOverlay.style.display = 'none';
+            moreBtnOverlay.style.display = 'none';
+            popupNotifications.style.display = 'none';
+            notificationBg.style.display = 'none';
+            modalBox.style.display = 'none';
+        }
     })
+
 
     
     document.addEventListener('click', (event) => {
