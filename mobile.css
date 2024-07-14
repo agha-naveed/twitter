@@ -1,0 +1,405 @@
+@media only screen and (max-width: 1282px) {
+    
+    .total-section {
+        display: grid;
+        justify-content: normal;
+    }
+
+    .left-bar {
+        width: 12%;
+        text-align: -webkit-right;
+    }
+    .navbar {
+        float: right;
+        align-items: center;
+    }
+    .navbar .nav-links li {
+        padding-right: 10px;
+    }
+    .nav-links .nav-div .nav-text {
+        display: none;
+    }
+    .navbar .post-btn svg {
+        display: block;
+    }
+    .navbar .post-btn a {
+        display: none;
+    }
+    .post-btn {
+        text-align: -webkit-center;
+        width: 50px;
+        height: 50px;
+        /* padding: 0 30px 0 10px; */
+    }
+
+    .twitter-logo {
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width:1070px) {
+    .side-bar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1005px) {
+    .side-bar {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width:824px) {
+    .front-side {
+        display: block;
+        margin: 0 9vmin;
+        height: 100%;
+        text-align: -webkit-center;
+    }
+    .left-side {
+        width: 100px;
+        position: relative;
+        top: 40px;
+    }
+    .left-side .image img {
+        width: 7vmin;
+    }
+    .right-side {
+        width: 100%;
+        padding: 0px 20px 20px 20px;
+    }
+    .footer {
+        position: relative;
+        bottom: 0;
+    }
+
+    .reactions .btn-gap .bookmark .added-notification .texts {
+        left: 35vw;
+    }
+
+    .bookmark-button .bookmark-notification {
+        left: 22vw;
+    }
+    
+}
+
+@media only screen and (max-width:770px) {
+    .front-side {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width:740px) {
+    .profile {
+        width: 86vw;
+    }
+
+    .left-bar {
+        width: 85px;
+    }
+    .header .header-cover .info {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width:704px) {
+    .modal {
+        background-color: white;
+        width: 100%;
+        justify-content: normal;
+        height: 100%;
+    }
+    .modal .modal-body {
+        width: 98vw;
+        top: 2px;
+    }
+    .modal-reply-btn {
+        display: none;
+    }
+    .modal-body .reply-options-content {
+        gap: 0;
+        width: 92vw;
+    }
+    .close-btn svg:nth-child(1) {
+        display: none;
+    }
+    .close-btn svg:nth-child(2) {
+        display: block;
+    }
+    .reply-upper-btn {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width:666px){
+    .left-bar {
+        width: 19%;
+    }
+    .center-bar {
+        width: 35rem;
+    }
+    .profile {
+        width: 86vw;
+    }
+    .posts-section {
+        width: 100%;
+    }
+    .post .caption-side {
+        width: 90%;
+    }
+    .user-info {
+        justify-content: space-between;
+    }
+    .user-info .right-buttons {
+        right: 0;
+    }
+
+    .post-reply .reply-text .reply-input #txt-area {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .caption-side .user-info .user-left-side {
+        width: 100%;
+    }
+    .caption-side .user-info .user-left-side .username {
+        width: 17vw;
+    }
+
+    .center-bar {
+        width: 34rem;
+    }
+}
+
+@media only screen and (max-width:615px) {
+    .left-bar {
+        width: 14%;
+    }
+
+    .profile {
+        width: 86%;
+    }
+    .profile .center-bar {
+        width: 100%;
+    }
+    .caption-side .post-caption, .caption-side .post-caption #caption-p {
+        width: 95%;
+    }
+    .caption-side .post-caption .hashtags {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width:609px) {
+    
+    .post .caption-side .user-info {
+        width: 100%;
+    }
+    .user-info .right-buttons {
+        position: relative;
+        right: 0;
+        width: 35%;
+        justify-content: right;
+    }
+}
+
+@media only screen and (max-width:590px) {
+    .left-bar {
+        display: none;
+    }
+    .post-reaction .post-reaction-button {
+        width: 95%;
+    }
+    .post-reply .reply-text {
+        width: 88%;
+    }
+    .post-reply .reply-text .reply-input #txt-area {
+        width: 99%;
+    }
+
+    .post-btn {
+        width: 56px;
+        height: 56px;
+    }
+    .overlay-follow-btn {
+        display: grid;
+        width: 56px;
+        height: 56px;
+        bottom: 54px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resp-nav {
+        display: flex;
+        z-index: 6;
+        width: 100%;
+    }
+
+    .profile {
+        width: 100%;
+    }
+    
+    .post .post-caption-section {
+        width: 100% !important;
+    }
+
+    .reactions .btn-gap .bookmark .added-notification .texts {
+        bottom: 70px;
+        left: 30vw;
+    }
+}
+
+@media only screen and (max-width:577px) {
+    .reactions .share {
+        display: none;
+    }
+    .front-side {
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width:532px) {
+    .front-side {
+        margin: 0;
+    }
+    .right-side .title h1 {
+        font-size: 40px;
+        margin: 30px 0;
+    }
+    .right-side .join h2 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .name-bar .name-bar-text h3 {
+        font-size: 16.5px;
+    }
+    .name-bar .name-bar-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .left-bar {
+        display: none;
+    }
+
+    
+
+    .reactions .btn-gap .bookmark .added-notification .texts {
+        bottom: 55px;
+        left: 25vw;
+    }
+
+    .posts-section2 .post .caption-side{
+        width: 100%;
+    }
+    .bookmark-button .bookmark-notification {
+        bottom: 60px;
+        width: 100%;
+        left: 0;
+        place-content: center;
+    }
+}
+
+@media only screen and (max-width:470px) {
+
+    .info .other-info {
+        display: grid;
+        grid-template-columns: repeat(1, 0.4fr);
+    }
+    .center-bar{
+        width: 100vw;
+    }
+    .post .caption-side {
+        width: 86%;
+    }
+    .post .caption-side .post-img .reactions {
+        float: left;
+    }
+    .caption-side .user-info .user-left-side {
+        width: 100%;
+    }
+    .user-info {
+        justify-content: normal;
+    }
+    .btn-gap .bookmark .added-notification {
+        width: 100%;
+        left: 0;
+    }
+    .reactions .btn-gap .bookmark .added-notification .texts{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+    }
+    .overlay-follow-btn {
+        bottom: 80px;
+    }
+}
+
+
+@media only screen and (max-width:438px) {
+    .post-reaction .post-reaction-button {
+        width: 95%;
+        /* gap: 5vw; */
+    }
+    .post-reply .reply-text {
+        width: 86%;
+    }
+}
+
+@media only screen and (max-width:410px) {
+    
+    .post .caption-side .user-info .user-left-side {
+        width: 100%;
+        display: grid;
+    }
+    .caption-side .user-info .user-left-side .user-name {
+        width: 100%;
+    }
+    .caption-side .user-info .user-left-side .user-grid-part {
+        display: flex;
+    }
+    
+    .caption-side .user-info .right-buttons {
+        position: relative;
+        right: 0;
+    }
+
+    .posts-section-highlight .highlight {
+        width: 82%;
+        margin: 32px 0;
+    }
+    .highlight a {
+        display: block;
+    }
+    
+    .modal .modal-body {
+        width: 100vw;
+    }
+}
+
+
+
+@media only screen and (max-width:383px) {
+    .post-reply .reply-text {
+        width: 84%;
+    }
+}
+
+@media only screen and (max-width:330px) {
+    .header-cover .posts-section .post {
+        width: 95%;
+    }
+    .reactions .btn-gap .bookmark .added-notification .texts p {
+        font-size: 12px;
+    }
+}
